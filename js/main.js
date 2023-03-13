@@ -62,14 +62,15 @@ document.querySelector(".buttons").onclick = (event) => {
         a = a * b;
         break;
       case "/":
-        if (b === '0') {
+        if (b === "0") {
           out.textContent = "Ошибка";
-          a = '';
-          b = '';
-          sing = '';
+          a = "";
+          b = "";
+          sing = "";
           return;
         }
         a = a / b;
+        a = a.toFixed(5);
         break;
     }
     finish = true;
